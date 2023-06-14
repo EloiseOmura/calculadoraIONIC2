@@ -1,20 +1,154 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="full">
+    <div id="numbers">
+      <ion-row>
+        <ion-col>
+          <h1>{{numero}}</h1>
+        </ion-col>
+      </ion-row>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div id="container">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button
+              color="medium"
+              style="font-weight: bold"
+              expand="block"
+              shape="round"
+              (click)="clear()"
+              >AC</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="medium" expand="block" (click)="negativo()"
+              >+/-</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="medium" expand="block" (click)="percent()"
+              >%</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button
+              expand="block"
+              color="warning"
+              style="font-weight: bold"
+              (click)="dividir()"
+              >/</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('7')"
+              >7</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('8')"
+              >8</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('9')"
+              >9</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button
+              expand="block"
+              color="warning"
+              style="font-weight: bold"
+              (click)="mult()"
+              >X</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('4')"
+              >4</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('5')"
+              >5</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('6')"
+              >6</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button
+              expand="block"
+              color="warning"
+              style="font-weight: bold"
+              (click)="negativo()"
+              >-</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('1')"
+              >1</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('2')"
+              >2</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="numeros ('3')"
+              >3</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button
+              expand="block"
+              color="warning"
+              style="font-weight: bold"
+              (click)="somar()"
+              >+</ion-button
+            >
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="6">
+            <ion-button color="light" expand="block" (click)="numeros ('0')"
+              >0</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button color="light" expand="block" (click)="virgula()"
+              >,</ion-button
+            >
+          </ion-col>
+          <ion-col>
+            <ion-button
+              color="light"
+              expand="block"
+              color="warning"
+              style="font-weight: bold"
+              >=</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </div>
 </ion-content>
